@@ -51,6 +51,7 @@
      <Compile Include="Assets\IGDC_Script\IGDC_NSWell\IGDC_NSWell_SQL\IGDC_NSWell_CreateConnect.cs" />
      <Compile Include="Assets\IGDC_Script\IGDC_NSWell\IGDC_NSWell_SQL\IGDC_NSWell_DelectSql.cs" />
      <Compile Include="Assets\IGDC_Script\IGDC_NSWell\IGDC_NSWell_SQL\IGDC_NSWell_SqlFactory.cs" />
+     <Compile Include="Assets\IGDC_Script\IGDC_NSWell\IGDC_NSWell_SQL\IGDC_NSWell_UpdateToSql.cs" />
      <Compile Include="Assets\IGDC_Script\IGDC_NSWell\IGDC_NSWell_SQL\IGDC_NSWell_WriteToSql.cs" />
      <Compile Include="Assets\IGDC_Script\IGDC_NSWell\IGDC_NSWell_UnityConnect.cs" />
      <None Include="Assets\IGDC_Text\IGDC_Text.txt" />

@@ -11,8 +11,10 @@ public abstract class IGDC_NSWell_ConnectToSql {
     //Databse 数据库名称
     private readonly string serverPath = "server  = localhost;User Id = root;password=;Database = cshaptest;CharSet=utf8";
     public string ServerPath { get { return serverPath; } }
+
     private string SQLCommand=null;
     public string SetSQLCommand { get { return SQLCommand==null? null:SQLCommand; } set { SQLCommand = value; } }
+
     //构造函数  用于初始化 serverPath 
     public IGDC_NSWell_ConnectToSql(string _serverPath)
     {
@@ -32,6 +34,4 @@ public abstract class IGDC_NSWell_ConnectToSql {
     /// </summary>
     /// <returns></returns>
   public  abstract string GetResult();
-
-
 }

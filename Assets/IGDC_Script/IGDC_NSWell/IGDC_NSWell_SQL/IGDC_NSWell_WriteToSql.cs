@@ -9,14 +9,13 @@ public class IGDC_NSWell_WriteToSql : IGDC_NSWell_CreateConnect {
 
     private bool Write()
     {
+        CompareToString = "1";
         if (base.GetResult().CompareTo("No") == 0)
-        {
             return false;
-        }
         else
         {
-            Debug.LogError(Alreadly("SELECT * FROM `test` WHERE name"));
-            if (Alreadly("SELECT * FROM `test` WHERE name"))
+            Debug.Log(Alrealdy("SELECT * FROM `test` WHERE name"));
+            if (!Alrealdy("SELECT * FROM `test` WHERE name"))
             {          
                 MySqlCommand mycmd = new MySqlCommand(SetSQLCommand, Mycon);
                 if (mycmd.ExecuteNonQuery() > 0)
@@ -33,38 +32,7 @@ public class IGDC_NSWell_WriteToSql : IGDC_NSWell_CreateConnect {
             return false;
         }
     }
-    /// <summary>
-    /// 判断正要插入的对象是否存在数据库中
-    /// </summary>
-    /// <param name="_SetSQLCommand"></param>
-    /// <returns></returns>
-    private bool Alreadly(string _SetSQLCommand)
-    {
-        MySqlCommand mycmd = new MySqlCommand(_SetSQLCommand, Mycon);
-        MySqlDataReader reader = mycmd.ExecuteReader();
-        try
-        {
-            while (reader.Read())
-            {              
-                if (reader.HasRows)
-                {
-                    if (reader.GetString(0).CompareTo(InsertName) == 0)
-                    {
-                        Debug.Log("An user are already!!Try other,please!");
-                        return false;
-                    }
-                }
-                else
-                    return true;
-            }
-        }
-        catch (System.Exception)
-        {            
-            Debug.LogError("无法查询数据库");           
-        }
-        finally { reader.Close(); }
-        return true;
-    }
+   
 
     /// <summary>
     /// 构造函数 写入
