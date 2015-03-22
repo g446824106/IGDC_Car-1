@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿/**************************************************************
+ * 
+ *                 Script by NSWell
+ *                  用于数据库更新                  
+ *
+ **************************************************************/
+using UnityEngine;
 using System.Collections;
 using MySql.Data.MySqlClient;
 public class IGDC_NSWell_UpdateToSql : IGDC_NSWell_CreateConnect {
@@ -10,7 +16,6 @@ public class IGDC_NSWell_UpdateToSql : IGDC_NSWell_CreateConnect {
     {
         try
         {
-            CompareToString = "1";
             if (base.GetResult().CompareTo("No") == 0)
                 return false;
             else

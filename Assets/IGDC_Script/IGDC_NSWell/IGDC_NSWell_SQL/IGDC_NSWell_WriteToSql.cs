@@ -1,4 +1,12 @@
-﻿using UnityEngine;
+﻿/**************************************************************
+ * 
+ *                 Script by NSWell
+ *                  用于数据库写入                  
+ *
+ **************************************************************/
+
+
+using UnityEngine;
 using System.Collections;
 using MySql.Data.MySqlClient;
 
@@ -9,13 +17,11 @@ public class IGDC_NSWell_WriteToSql : IGDC_NSWell_CreateConnect {
 
     private bool Write()
     {
-        CompareToString = "1";
         if (base.GetResult().CompareTo("No") == 0)
             return false;
         else
-        {
-            Debug.Log(Alrealdy("SELECT * FROM `test` WHERE name"));
-            if (!Alrealdy("SELECT * FROM `test` WHERE name"))
+        {            
+            if (Alrealdy("SELECT * FROM `test` WHERE name"))
             {          
                 MySqlCommand mycmd = new MySqlCommand(SetSQLCommand, Mycon);
                 if (mycmd.ExecuteNonQuery() > 0)
@@ -32,7 +38,7 @@ public class IGDC_NSWell_WriteToSql : IGDC_NSWell_CreateConnect {
             return false;
         }
     }
-   
+
 
     /// <summary>
     /// 构造函数 写入
@@ -41,15 +47,24 @@ public class IGDC_NSWell_WriteToSql : IGDC_NSWell_CreateConnect {
     public  IGDC_NSWell_WriteToSql(string SQLCommand)
     {
         SetSQLCommand = SQLCommand;
-        if(SetSQLCommand!=null)
-        {            
+        if (SetSQLCommand != null)
+        {
             if (Write())
-                Debug.Log("Write");
+            {
+                Success = true;
+                Debug.Log("写入成功");
+            }
             else
-                Debug.LogError("Can not write.");
-        }     
+            {
+                Success = false;
+                Debug.LogError("写入失败");
+            }
+        }
         else
-            Debug.LogError("Can not write.");
+        {
+            Success = false;
+            Debug.LogError("写入失败");
+        }
     }
     public IGDC_NSWell_WriteToSql() { }
 }

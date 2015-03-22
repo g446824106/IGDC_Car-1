@@ -1,10 +1,16 @@
-﻿using UnityEngine;
+﻿/**************************************************************
+ * 
+ *                 Script by NSWell
+ *                  用于数据库的连接
+ *
+ **************************************************************/
+using UnityEngine;
 using System.Collections;
 using MySql.Data.MySqlClient;
 public class IGDC_NSWell_CreateConnect : IGDC_NSWell_ConnectToSql
 {
-    private string compareToString=null;
-    public string CompareToString { get { return compareToString; } set { compareToString = value; } }
+
+    //开启连接
     private MySqlConnection mycon = null;
     public MySqlConnection Mycon { get { return mycon; } }
 
@@ -16,7 +22,7 @@ public class IGDC_NSWell_CreateConnect : IGDC_NSWell_ConnectToSql
     {
         if (ConnectToSql())
         {
-            Debug.Log("Connected");
+            Debug.Log("连接数据库成功。");
             return "Ok";
         }
         else
@@ -38,7 +44,7 @@ public class IGDC_NSWell_CreateConnect : IGDC_NSWell_ConnectToSql
         }
         catch (System.Exception)
         {
-            Debug.LogError("无法连接服务器.");
+            Debug.LogError("无法连接服务器。");
             mycon.Close();
             return false;
         }
@@ -76,14 +82,14 @@ public class IGDC_NSWell_CreateConnect : IGDC_NSWell_ConnectToSql
                 }
                 else
                 {
-                    Debug.Log("An user are not already!!Try other,please!");
+                    Debug.Log("用户已存在，请重试!");
                     return false;
                 }
             }
         }
         catch (System.Exception)
         {
-            Debug.LogError("无法查询数据库");
+            Debug.LogError("无法查询数据库。");
         }
         finally { reader.Close(); }
         return false;

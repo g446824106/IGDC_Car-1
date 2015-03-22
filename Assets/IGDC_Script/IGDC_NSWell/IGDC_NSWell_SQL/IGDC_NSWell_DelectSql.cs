@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿/**************************************************************
+ * 
+ *                 Script by NSWell
+ *                  用于数据库删除                  
+ *
+ **************************************************************/
+using UnityEngine;
 using System.Collections;
 using MySql.Data.MySqlClient;
 public class IGDC_NSWell_DelectSql :IGDC_NSWell_CreateConnect {
@@ -7,8 +13,7 @@ public class IGDC_NSWell_DelectSql :IGDC_NSWell_CreateConnect {
         if (base.GetResult().CompareTo("No") == 0)
             return false;
         else
-        {
-            CompareToString = "1";
+        {            
             Debug.Log(Alrealdy("SELECT * FROM `test` WHERE name"));
             if (Alrealdy("SELECT * FROM `test` WHERE name"))
             {

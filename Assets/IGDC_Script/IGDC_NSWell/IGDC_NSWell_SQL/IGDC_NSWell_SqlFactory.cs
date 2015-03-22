@@ -1,7 +1,26 @@
-﻿using UnityEngine;
+﻿/**************************************************************
+ * 
+ *                 Script by NSWell
+ *                  生产处对应操作的类                  
+ *
+ **************************************************************/
+using UnityEngine;
 using System.Collections;
 public class IGDC_NSWell_SqlFactory
 {
+    private string tempName;
+    private string tempPassword;
+
+    public string TempPassword
+    {
+        get { return tempPassword; }
+        set { tempPassword = value; }
+    }
+    public string TempName
+    {
+        get { return tempName; }
+        set { tempName = value; }
+    }
     /// <summary>
     /// 生产出对应操作类
     /// </summary>
@@ -24,6 +43,7 @@ public class IGDC_NSWell_SqlFactory
                 sql = new IGDC_NSWell_UpdateToSql(SQLSentens);//"update test set password='往往' where name= 1"
                 break;
             case IGDC_NSWell_Enum.OperatingState.Read:
+                sql = new IGDC_NSWell_ReadBySql(SQLSentens,TempName,TempPassword);
                 break;
         }
         return sql;

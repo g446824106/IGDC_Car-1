@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿/**************************************************************
+ * 
+ *                 Script by NSWell
+ *                  枚举类                  
+ *
+ **************************************************************/
+using UnityEngine;
 using System.Collections;
 namespace IGDC_NSWell_Enum
 {
