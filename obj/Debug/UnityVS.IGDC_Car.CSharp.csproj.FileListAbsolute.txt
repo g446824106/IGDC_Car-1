@@ -1,0 +1,16 @@
+E:\IGDC\IGDC_Car\IGDC_Car\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+E:\IGDC\IGDC_Car\IGDC_Car\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+E:\IGDC\IGDC_Car\IGDC_Car\Temp\UnityVS_bin\Debug\I18N.dll
+E:\IGDC\IGDC_Car\IGDC_Car\Temp\UnityVS_bin\Debug\I18N.West.dll
+E:\IGDC\IGDC_Car\IGDC_Car\Temp\UnityVS_bin\Debug\MySql.Data.dll
+E:\IGDC\IGDC_Car\IGDC_Car\Temp\UnityVS_bin\Debug\System.Data.dll
+E:\IGDC\IGDC_Car\IGDC_Car\Temp\UnityVS_bin\Debug\System.Drawing.dll
+E:\IGDC\IGDC_Car\IGDC_Car\Temp\UnityVS_bin\Debug\UnityEditor.dll
+E:\IGDC\IGDC_Car\IGDC_Car\Temp\UnityVS_bin\Debug\UnityEngine.dll
+E:\IGDC\IGDC_Car\IGDC_Car\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+E:\IGDC\IGDC_Car\IGDC_Car\Temp\UnityVS_bin\Debug\UnityEngine.xml
+E:\IGDC\IGDC_Car\IGDC_Car\Temp\UnityVS_bin\Debug\UnityEditor.xml
+E:\IGDC\IGDC_Car\IGDC_Car\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+E:\IGDC\IGDC_Car\IGDC_Car\obj\Debug\UnityVS.IGDC_Car.CSharp.csprojResolveAssemblyReference.cache
+E:\IGDC\IGDC_Car\IGDC_Car\obj\Debug\Assembly-CSharp.dll
+E:\IGDC\IGDC_Car\IGDC_Car\obj\Debug\Assembly-CSharp.pdb
